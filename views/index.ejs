@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>revenko-test-qualium</title>
+</head>
+
+<body>
+
+  <h3> ITEMS <h3>
+    <ul class="users">
+    <% for(var i=0; i<users.length; i++) {%>
+      <li class="user">
+        <span><%= users[i].name %></span>
+        <span><%= users[i].number %></span>
+      </li>
+    <% } %>
+    </ul>
+
+  <form action="/users" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="number" name="nubmer">
+    <button type="submit">Submit</button>
+  </form>
+
+  <div>
+    <h2>Update</h2>
+    <button id="update">Update</button>
+  </div>
+
+  <div>
+    <h2>Delete<h2>
+    <button id="delete">Delete</button>
+  </div>
+
+
+
+  <script src="put.js"></script>
+  <script scr="delete.js"></script>
+</body>
+</html>
